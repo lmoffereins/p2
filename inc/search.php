@@ -8,7 +8,7 @@
 
 class P2_Search {
 
-	function P2_Search() {
+	public function __construct() {
 		// Bind search query filters
 		add_filter( 'posts_distinct',   array( &$this, 'search_comments_distinct' ) );
 		add_filter( 'posts_where',      array( &$this, 'search_comments_where'    ) );

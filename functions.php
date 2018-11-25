@@ -42,7 +42,7 @@ class P2 {
 	/**
 	 * Includes and instantiates the various P2 components.
 	 */
-	function P2() {
+	public function __construct() {
 		// Fetch options
 		$this->options = get_option( $this->option_name );
 		if ( false === $this->options )

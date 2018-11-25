@@ -37,8 +37,8 @@
 class P2_Post_List_Creator extends P2_List_Creator {
 	var $form_action_name = 'p2-post-task-list';
 
-	function P2_Post_List_Creator() {
-		parent::P2_List_Creator();
+	public function __construct() {
+		parent::__construct();
 
 		// Parse everything on display
 		add_filter( 'the_content', array( $this, 'reset_task_list_counter' ), 0 );
@@ -181,8 +181,8 @@ class P2_Post_List_Creator extends P2_List_Creator {
 class P2_Comment_List_Creator extends P2_List_Creator {
 	var $form_action_name = 'p2-comment-task-list';
 
-	function P2_Comment_List_Creator() {
-		parent::P2_List_Creator();
+	public function __construct() {
+		parent::__construct();
 
 		// Parse everything on display
 		add_filter( 'comment_text', array( $this, 'reset_task_list_counter' ), 0 );
@@ -356,7 +356,7 @@ class P2_List_Creator {
 
 	var $preserved_texts = array();
 
-	function P2_List_Creator() {
+	public function __construct() {
 		// Have we done the CSS/JS already?
 		static $did_header = false;
 

@@ -18,7 +18,7 @@ class P2_Mentions extends P2_Terms_In_Comments {
 	var $users          = array();
 	var $mentions_regex = '/\B@([\w-\.]+)\b/';
 
-	function P2_Mentions() {
+	public function __construct() {
 		p2_maybe_define( 'P2_MENTIONS_TAXONOMY', 'mentions', 'p2_mentions_taxonomy' );
 		p2_maybe_define( 'P2_MENTIONS_SLUG',     'mentions', 'p2_mentions_slug'     );
 
@@ -28,7 +28,7 @@ class P2_Mentions extends P2_Terms_In_Comments {
 		add_filter( 'comment_text',      array( &$this, 'mention_links'   ), 5 );
 		add_filter( 'p2_found_mentions', array( &$this, 'filter_mentions' ), 5 );
 
-		parent::P2_Terms_In_Comments( P2_MENTIONS_TAXONOMY );
+		parent::__construct( P2_MENTIONS_TAXONOMY );
 	}
 
 	/**
