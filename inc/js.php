@@ -121,7 +121,8 @@ class P2_JS {
 		wp_enqueue_script( 'p2js',
 			P2_JS_URL . '/p2.js',
 			$depends,
-			'20140603'
+			'20140603',
+			true // Load in footer which is needed for comment-reply (and others)
 		);
 
 		wp_localize_script( 'p2js', 'p2txt', array(
