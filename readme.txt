@@ -25,6 +25,9 @@ http://en.blog.wordpress.com/2009/03/11/p2-the-new-prologue/
 
 == Changelog ==
 
+= 26 November 2018 =
+* Fixed compatibility issues with PHP 4+ and WordPress 5.0.
+
 = 29 January 2016 =
 * Switch the order of esc_like/escape calls.
 
