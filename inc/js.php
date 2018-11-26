@@ -198,7 +198,6 @@ class P2_JS {
 	static function print_options() {
 		$mentions = p2_get( 'mentions' );
 
-		get_currentuserinfo();
 		$page_options['nonce']= wp_create_nonce( 'ajaxnonce' );
 		$page_options['prologue_updates'] = 1;
 		$page_options['prologue_comments_updates'] = 1;
